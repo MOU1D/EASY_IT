@@ -3,7 +3,6 @@ package com.example.EASY_IT.model;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.util.List;
 
 @Getter
@@ -21,6 +20,8 @@ public class Employee {
 
     @Column(name = "lastname", nullable = false)
     private String lastname;
+
+
 
     @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Product> produits;
